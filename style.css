@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "League Spartan", sans-serif;
+    background-color: hsl(222, 26%, 31%);
+}
+
+body.light {background-color: hsl(0, 0%, 90%);}
+
+
+.header {
+    display: flex;
+    height: 3rem;
+    width: 32rem;
+}
+
+.title {
+    margin: 1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+body.light .title {
+    color: hsl(60, 10%, 19%)}
+
+
+.theme-title {
+    margin-left: 19rem;
+    margin-top: 22px;
+    color: hsl(0, 0%, 100%);
+}
+
+body.light .theme-title {
+    color: hsl(60, 10%, 19%)
+}
+
+/* TOGGLE BUTTON*/
+
+.toggle-button {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.fa-moon {color: #f1c40f;}
+
+.fa-sun {color: #f39c12;}
+
+.checkbox-label .ball {
+    background-color: #fff;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
+.checkbox-label {
+    background-color: #111;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35rem;
+    width: 32rem;
+}
+
+/* SCREEN */
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 7rem;
+    width: 30rem;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: hsl(224, 36%, 15%);
+}
+
+.screen-current {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row-reverse;
+    color: hsl(0, 0%, 100%);
+}
+
+.screen-last {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1rem;
+    color: hsl(0, 0%, 100%);
+}
+
+/* KEYPAD */
+
+.grid-container {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    width: 30rem;
+    margin: 1rem;
+    border-radius: 15px;
+    background-color: hsl(223, 31%, 20%);
+}
+
+.grid-container > button {
+    background-color: hsl(30, 25%, 89%);
+    padding: 0;
+    text-align: center;
+    color: hsl(221, 14%, 31%);
+    margin: 10%;
+    height: 50px;
+    font-size: 32px;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 5px 0  hsl(28, 16%, 65%);
+    border-radius: 10px;
+  }
+
+  .grid-container > button.btn17 {
+    grid-column: 1/3;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px 0 hsl(224, 28%, 35%) ;
+}
+
+.grid-container > button.btn4 {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 5px 0 hsl(224, 28%, 35%) ;
+}
+
+.grid-container > button.btn4:hover {
+    background-color:lightsteelblue;
+}
+
+.grid-container > button.btn18:hover {
+    background-color:hsl(6, 74%, 67%);
+}
+
+.grid-container > button.btn18 {
+    grid-column: 3/5;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 5px 0 hsl(6, 70%, 34%) ;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color:snow;
+}
+
+/* LIGHT THEME */
+
+body.light .grid-container > button {
+    color: hsl(60, 10%, 19%);
+}
+
+body.light .screen {
+    background-color: hsl(0, 0%, 93%);
+}
+
+body.light .grid-container {
+    background-color: hsl(0, 5%, 81%);
+}
+
+body.light .grid-container > button.btn17 {
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px 0 hsl(185, 58%, 25%) ;
+}
+
+body.light .grid-container > button.btn4 {
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px 0 hsl(185, 58%, 25%) ;
+}
+
+body.light .grid-container > button.btn18 {
+    background-color: hsl(25, 98%, 40%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0 5px 0 hsl(25, 99%, 27%) ;
+}
+
+body.light .screen-current {
+    color: hsl(60, 10%, 19%);
+}
+
+.grid-container > button.btn17:hover {
+    background-color:lightsteelblue;
+}
+
+body.light .grid-container > button.btn17:hover {
+    background-color:rgb(67, 160, 172);
+}
+
+body.light .grid-container > button.btn4:hover {
+    background-color:rgb(67, 160, 172);
+}
+
+body.light .grid-container > button.btn18:hover {
+    background-color:hsl(6, 74%, 67%);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
